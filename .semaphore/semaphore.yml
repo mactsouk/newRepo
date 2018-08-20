@@ -18,7 +18,7 @@ blocks:
     task:
       jobs:
       - name: RSpec
-        doesNotExist:		
+        commands:		
           - checkout
           - echo "make rspec"
 
@@ -31,14 +31,6 @@ blocks:
         commands:
           - checkout
           - echo "make security"
-
-  - name: "Integration tests"
-    task:
-      jobs:
-      - name: Cucumber
-        commands:
-          - checkout
-          - echo "make cucumber"
 
   - name: "Push Image"
     task:
