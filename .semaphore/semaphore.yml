@@ -18,8 +18,7 @@ blocks:
     task:
       jobs:
       - name: RSpec
-        commands:
-          - doesNotExist		
+        doesNotExist:		
           - checkout
           - echo "make rspec"
 
