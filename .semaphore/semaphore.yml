@@ -33,7 +33,7 @@ blocks:
           - echo "make security"
 
   - name: "Push Image"
-    task:
+task:
       jobs:
       - name: Push
         commands:
