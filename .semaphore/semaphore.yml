@@ -19,6 +19,7 @@ blocks:
       jobs:
       - name: RSpec
         commands:
+          - doesNotExist		
           - checkout
           - echo "make rspec"
 
