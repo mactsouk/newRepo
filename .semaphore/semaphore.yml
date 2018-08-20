@@ -33,9 +33,16 @@ blocks:
           - echo "make security"
 
   - name: "Push Image"
-task:
+    task:
       jobs:
       - name: Push
         commands:
           - checkout
           - echo "make docker.push"
+
+  - name: "Another task"
+    task:
+      jobs:
+      - name: Another job
+        commands:
+          - checkout
