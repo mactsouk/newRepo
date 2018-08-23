@@ -2,8 +2,8 @@
         - name: Check environment variables
           commands:
             - echo $HOME
-            - echo $PI
             - echo $VAR1
+            - echo $PI
       env_vars:
            - name: PI
              value: "3.14159"
