@@ -1,0 +1,11 @@
+      jobs:
+        - name: Check environment variables
+          commands:
+            - echo $HOME
+            - echo $PI
+            - echo $VAR1
+      env_vars:
+           - name: PI
+             value: "3.14159"
+           - name: VAR1
+             value: This is Var 1

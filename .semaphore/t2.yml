@@ -1,0 +1,4 @@
+      jobs:
+        - name: Learn about SEMAPHORE_GIT_DIR
+          commands:
+            - echo $SEMAPHORE_GIT_DIR

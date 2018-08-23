@@ -1,48 +1,11 @@
 version: v1.0
-name: First pipeline example
+name: Trying task_file
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-
 blocks:
-  - name: "Smoke tests"
-    task:
-      jobs:
-      - name: Smoke
-        commands:
-          - checkout
-          - echo "make smoke"
-
-  - name: "Unit tests"
-    task:
-      jobs:
-      - name: RSpec
-        commands:		
-          - checkout
-          - echo "make rspec"
-
-      - name: Lint code
-        commands:
-          - checkout
-          - echo "make lint"
-
-      - name: Check security
-        commands:
-          - checkout
-          - echo "make security"
-
-  - name: "Push Image"
-    task:
-      jobs:
-      - name: Push
-        commands:
-          - checkout
-          - echo "make docker.push"
-
-  - name: "Another task"
-    task:
-      jobs:
-      - name: Another job
-        commands:
-          - checkout
+  - name: Task block 1
+    task_file: t1.yml
+  - name: Task block 2
+    task_file: t2.yml
